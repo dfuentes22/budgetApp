@@ -16,7 +16,7 @@
     color: #ffffff;
 }
 
-.totalAmount {
+#totalAmount {
     font-family: 'Anton', sans-serif;
     text-align: center;
     font-size: 36px;  
