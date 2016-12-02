@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Budget App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+<body>
+<!-- Main Display -->
+	<section class="main-display feature-image-default">
+		<h1 id="budget-total">The Budget App</h1>
+	</section>
+
+<!-- Input -->
+	<section class="input-display">
+		<div class="container">
+			<input type="text" class="form-control" id="inputAmount" placeholder="Amount $$$">				
+			<button type="submit" id="addAmount" class="btn btn-default btn-success">Add</button>
+			<button type="submit" id="subtractAmount" class="btn btn-default btn-danger">Subtract</button>	
+		</div>
+	</section>
+
+<!-- Total -->
+	<section class="results-display">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p id="totalAmount" class="totalAmount">Total $</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- Results -->
+	<section class="results-display">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<ul id="addList" class="list-group">
+				
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<ul id="subList" class="list-group">
+				
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- Footer -->
+<footer class="text-muted">
+	<div class="container">
+			<ul class="list-inline">
+				<li>
+					<a href="https://github.com/dfuentes22" ><i class="fa fa-github"></i></a>
+				</li>
+				<li>
+					<a href="https://twitter.com/FuentesDPro"><i class="fa fa-twitter"></i></a>
+				</li>
+				<li>
+					<a href="mailto:imdanfuentes@gmail.com"><i class="fa fa-envelope"></i></a>
+				</li>          
+			</ul>
+	</div>
+</footer>
+
+<!-- scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

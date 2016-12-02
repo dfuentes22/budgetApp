@@ -1,0 +1,73 @@
+.feature-image-default {
+    background: url(../img/bkgd.jpg) no-repeat;
+    background-size: cover;
+}
+.main-display {
+    display: table;
+    width: 100%;
+    height: 400px;
+}
+
+.main-display h1 {
+	font-family: 'Anton', sans-serif;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #ffffff;
+}
+
+.totalAmount {
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    font-size: 36px;  
+}
+
+.input-display {
+	text-align: center;
+	padding: 50px;
+	background-color: #336699;
+}
+
+#inputAmount{
+	display: inline-block;
+	width: 50%;
+}
+
+.results-display {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.plus{
+    background-color: green;
+    color: white;
+}
+
+.minus{
+    background-color: tomato;
+    color: white;
+}
+
+.good{
+    color:green;
+}
+
+.bad{
+    color: tomato;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  bottom: 0;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+li {
+    font-size: 2em;
+}
