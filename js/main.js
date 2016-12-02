@@ -11,6 +11,8 @@ addAmt.addEventListener("click", function(){
 	node.className = "list-group-item plus";	
 	if(addTotal()){
 		document.getElementById("addList").appendChild(node);
+		document.getElementById("inputAmount").value = "";
+
 	}
 });
 
@@ -20,6 +22,7 @@ subAmt.addEventListener("click", function(){
 	node.className = "list-group-item minus";
 	if(subTotal()){
 		document.getElementById("subList").appendChild(node);
+		document.getElementById("inputAmount").value = "";
 	}
 });
 
