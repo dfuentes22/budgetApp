@@ -52,8 +52,9 @@ subAmt.addEventListener("click", function(){
 function createNode(){
 	var node = document.createElement("LI");
 	var inputAmt = document.getElementById("inputAmount").value;
+	var abs = Math.abs(inputAmt);
 	if(inputAmt){
-		var textnode = document.createTextNode("$ " + inputAmt);	
+		var textnode = document.createTextNode("$ " + abs);	
 	}
 	node.appendChild(textnode);
 	return node;
