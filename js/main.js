@@ -24,15 +24,15 @@ addAmt.addEventListener("click", function(){
 	}
 });
 
-// //Action when subtract is clicked
-// subAmt.addEventListener("click", function(){ 
-// 	var node = createNode();
-// 	node.className = "list-group-item minus";
-// 	if(subTotal()){
-// 		document.getElementById("subList").appendChild(node);
-// 		document.getElementById("inputAmount").value = "";
-// 	}
-// });
+//Action when subtract is clicked
+subAmt.addEventListener("click", function(){ 
+	var node = createNode();
+	node.className = "list-group-item minus";
+	if(subTotal()){
+		document.getElementById("subList").appendChild(node);
+		document.getElementById("inputAmount").value = "";
+	}
+});
 
 function createNode(){
 	var node = document.createElement("LI");
@@ -45,24 +45,24 @@ function createNode(){
 }
 
 
-// function subTotal(){
-// 	var inputAmt = document.getElementById("inputAmount").value;
-// 	if(isNaN(inputAmt)){
-// 		alert("Need to enter a number");
-// 		return false;
-// 	} 
-// 	count = count - Number(inputAmt);
-// 	if(count >= 0){
-// 		totalAmt.className = "good";
-// 	}
-// 	else{
-// 		totalAmt.className = "bad";
-// 	}
-// 	totalAmt.innerHTML = "$ " + count;		
+function subTotal(){
+	var inputAmt = document.getElementById("inputAmount").value;
+	if(isNaN(inputAmt)){
+		alert("Need to enter a number");
+		return false;
+	} 
+	count = count - Number(inputAmt);
+	if(count >= 0){
+		totalAmt.className = "good";
+	}
+	else{
+		totalAmt.className = "bad";
+	}
+	totalAmt.innerHTML = "$ " + count;		
 
-// 	return  true;
+	return  true;
 
-// }
+}
 
 function addTotal(){
 	var inputAmt = document.getElementById("inputAmount").value;
