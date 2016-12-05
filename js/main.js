@@ -26,11 +26,26 @@ addAmt.addEventListener("click", function(){
 
 //Action when subtract is clicked
 subAmt.addEventListener("click", function(){ 
+	// var node = createNode();
+	// node.className = "list-group-item minus";
+	// if(subTotal()){
+	// 	document.getElementById("subList").appendChild(node);
+	// 	document.getElementById("inputAmount").value = "";
+	// }
+	var inputAmt = document.getElementById("inputAmount").value;
 	var node = createNode();
-	node.className = "list-group-item minus";
+	node.className = "list-group-item minus";	
 	if(subTotal()){
-		document.getElementById("subList").appendChild(node);
-		document.getElementById("inputAmount").value = "";
+		if(inputAmt < 0){
+			node.className = "list-group-item plus";
+			document.getElementById("addList").appendChild(node);
+			document.getElementById("inputAmount").value = "";
+		}
+		else{
+			node.className = "list-group-item minus";
+			document.getElementById("subList").appendChild(node);
+			document.getElementById("inputAmount").value = "";
+		}
 	}
 });
 
