@@ -7,24 +7,32 @@ var count = 0;
 
 //Action when Add is clicked
 addAmt.addEventListener("click", function(){
+	var inputAmt = document.getElementById("inputAmount").value;
 	var node = createNode();
 	node.className = "list-group-item plus";	
 	if(addTotal()){
-		document.getElementById("addList").appendChild(node);
-		document.getElementById("inputAmount").value = "";
-
+		if(inputAmt >=0){
+			node.className = "list-group-item plus";
+			document.getElementById("addList").appendChild(node);
+			document.getElementById("inputAmount").value = "";
+		}
+		else{
+			node.className = "list-group-item minus";
+			document.getElementById("subList").appendChild(node);
+			document.getElementById("inputAmount").value = "";
+		}
 	}
 });
 
-//Action when subtract is clicked
-subAmt.addEventListener("click", function(){ 
-	var node = createNode();
-	node.className = "list-group-item minus";
-	if(subTotal()){
-		document.getElementById("subList").appendChild(node);
-		document.getElementById("inputAmount").value = "";
-	}
-});
+// //Action when subtract is clicked
+// subAmt.addEventListener("click", function(){ 
+// 	var node = createNode();
+// 	node.className = "list-group-item minus";
+// 	if(subTotal()){
+// 		document.getElementById("subList").appendChild(node);
+// 		document.getElementById("inputAmount").value = "";
+// 	}
+// });
 
 function createNode(){
 	var node = document.createElement("LI");
@@ -37,24 +45,24 @@ function createNode(){
 }
 
 
-function subTotal(){
-	var inputAmt = document.getElementById("inputAmount").value;
-	if(isNaN(inputAmt)){
-		alert("Need to enter a number");
-		return false;
-	} 
-	count = count - Number(inputAmt);
-	if(count >= 0){
-		totalAmt.className = "good";
-	}
-	else{
-		totalAmt.className = "bad";
-	}
-	totalAmt.innerHTML = "$ " + count;		
+// function subTotal(){
+// 	var inputAmt = document.getElementById("inputAmount").value;
+// 	if(isNaN(inputAmt)){
+// 		alert("Need to enter a number");
+// 		return false;
+// 	} 
+// 	count = count - Number(inputAmt);
+// 	if(count >= 0){
+// 		totalAmt.className = "good";
+// 	}
+// 	else{
+// 		totalAmt.className = "bad";
+// 	}
+// 	totalAmt.innerHTML = "$ " + count;		
 
-	return  true;
+// 	return  true;
 
-}
+// }
 
 function addTotal(){
 	var inputAmt = document.getElementById("inputAmount").value;
